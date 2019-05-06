@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="cwo-AO-s4i">
+            <objects>
+                <viewController storyboardIdentifier="detailStoryboardId" id="SmE-bb-NTV" customClass="DetailViewController" customModule="simpsonsviewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rs3-4R-2pl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="djk-n8-Bge">
+                                <rect key="frame" x="0.0" y="64" width="414" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="KUR-u5-ttW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QB8-QM-VOB">
+                                <rect key="frame" x="20" y="284" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="vc3-8D-edI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5j8-cc-NHV">
+                                <rect key="frame" x="20" y="344" width="374" height="518"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5j8-cc-NHV" firstAttribute="top" secondItem="QB8-QM-VOB" secondAttribute="bottom" constant="30" id="AF2-Ir-pNc"/>
+                            <constraint firstItem="hsY-bS-qQD" firstAttribute="bottom" secondItem="5j8-cc-NHV" secondAttribute="bottom" id="QZf-n5-npF"/>
+                            <constraint firstItem="djk-n8-Bge" firstAttribute="leading" secondItem="hsY-bS-qQD" secondAttribute="leading" id="cqi-Bu-qgl"/>
+                            <constraint firstItem="hsY-bS-qQD" firstAttribute="trailing" secondItem="5j8-cc-NHV" secondAttribute="trailing" constant="20" id="fNA-po-eAn"/>
+                            <constraint firstItem="hsY-bS-qQD" firstAttribute="trailing" secondItem="QB8-QM-VOB" secondAttribute="trailing" constant="20" id="gHf-oZ-TC9"/>
+                            <constraint firstItem="5j8-cc-NHV" firstAttribute="leading" secondItem="hsY-bS-qQD" secondAttribute="leading" constant="20" id="jbj-Su-EEy"/>
+                            <constraint firstItem="djk-n8-Bge" firstAttribute="top" secondItem="hsY-bS-qQD" secondAttribute="top" constant="20" id="nxO-cv-vS9"/>
+                            <constraint firstItem="QB8-QM-VOB" firstAttribute="leading" secondItem="hsY-bS-qQD" secondAttribute="leading" constant="20" id="o8w-PO-G2X"/>
+                            <constraint firstItem="QB8-QM-VOB" firstAttribute="top" secondItem="djk-n8-Bge" secondAttribute="bottom" constant="20" id="okf-wh-w4w"/>
+                            <constraint firstItem="hsY-bS-qQD" firstAttribute="trailing" secondItem="djk-n8-Bge" secondAttribute="trailing" id="xrk-f8-0gN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hsY-bS-qQD"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="5j8-cc-NHV" id="OVA-cH-Ie0"/>
+                        <outlet property="imageHolder" destination="djk-n8-Bge" id="dpY-tF-ThW"/>
+                        <outlet property="titleLabel" destination="QB8-QM-VOB" id="qjB-Ex-yKH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MO7-Ul-sNH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-12" y="235"/>
+        </scene>
+    </scenes>
+</document>
